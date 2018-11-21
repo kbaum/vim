@@ -5,7 +5,7 @@ filetype plugin indent on
 set rtp+=/usr/local/opt/fzf
 set nu
 
-" nnoremap <c-t> :FZF<cr>
+nnoremap <c-p> :FZF<cr>
 nnoremap <c-t> :GitFiles<cr>
 nnoremap <leader>sv :source $MYVIMRC<cr>
 nnoremap <silent> <leader>ev :tabe $MYVIMRC<cr>
@@ -38,7 +38,7 @@ let g:ale_fixers = {
 \   'javascript': ['eslint'],
 \   'ruby': ['rubocop']
 \}
-let g:ale_fix_on_save = 0
+let g:ale_fix_on_save = 1
 let g:ale_linters = {
 \   'ruby': ['rubocop'],
 \   'html': ['htmlhint'],
