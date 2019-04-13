@@ -8,7 +8,11 @@ set nu
 nnoremap <c-p> :FZF<cr>
 nnoremap <c-t> :GitFiles<cr>
 nnoremap <leader>sv :source $MYVIMRC<cr>
+nnoremap <leader>a0 :let g:ale_fix_on_save = 0<cr>
+nnoremap <leader>a1 :let g:ale_fix_on_save = 1<cr>
+nnoremap <leader>ts :set smartindent tabstop=2 shiftwidth=2 expandtab<cr>
 nnoremap <silent> <leader>ev :tabe $MYVIMRC<cr>
+
 
 
 "nmap <silent> f 1GvG=
@@ -22,10 +26,7 @@ map <Leader>l :call RunLastSpec()<CR>
 map <Leader>a :call RunAllSpecs()<CR>
 let g:rspec_command = "!bundle exec spring rspec {spec}"
 
-set smartindent
-set tabstop=2
-set shiftwidth=2
-set expandtab
+set smartindent tabstop=2 shiftwidth=2 expandtab
 
 " Case insensitive matching unless one capital letter
 set ignorecase
@@ -35,13 +36,12 @@ let g:gist_post_private = 1
 
 let g:ale_set_highlights = 1
 let g:ale_fixers = {
-\   'javascript': ['eslint'],
+\   'javascript': ['eslint', 'prettier'],
 \   'ruby': ['rubocop']
 \}
 let g:ale_fix_on_save = 1
 let g:ale_linters = {
 \   'ruby': ['rubocop'],
-\   'html': ['htmlhint'],
 \   'javascript': ['eslint']
 \}
 
@@ -55,3 +55,5 @@ endif
 
 let g:ag_working_path_mode="r"
 
+
+let g:github_user = 'karl.baum@gmail.com'

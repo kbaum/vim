@@ -1,7 +1,10 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =5
+let g:netrw_dirhist_cnt =8
 let g:netrw_dirhist_1='/Users/karl.baum/workspace/model_renamer'
 let g:netrw_dirhist_2='/Users/karl.baum/workspace/viewthespace'
 let g:netrw_dirhist_3='/Users/karl.baum/workspace/viewthespace/.git'
 let g:netrw_dirhist_4='/Users/karl.baum/workspace/viewthespace'
 let g:netrw_dirhist_5='/Users/karl.baum/workspace/viewthespace/app/workers/admin'
+let g:netrw_dirhist_6='/Users/karlbaum/workspace/resque_coverband'
+let g:netrw_dirhist_7='/Users/karlbaum/workspace/checkout-widget/app/templates'
+let g:netrw_dirhist_8='/Users/karlbaum/workspace/checkout-widget/interface/build'
