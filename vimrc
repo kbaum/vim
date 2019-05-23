@@ -41,8 +41,8 @@ let g:ale_fixers = {
 \}
 let g:ale_fix_on_save = 1
 let g:ale_linters = {
-\   'ruby': ['rubocop'],
-\   'javascript': ['eslint']
+\   'ruby': ['rubocop', 'prettier'],
+\   'javascript': ['eslint', 'prettier']
 \}
 
 if has("clipboard")
