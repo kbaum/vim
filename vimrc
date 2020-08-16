@@ -1,9 +1,11 @@
 execute pathogen#infect()
 syntax on
+colorscheme onedark
 filetype plugin indent on
 
 set rtp+=/usr/local/opt/fzf
 set nu
+set shiftwidth=2
 
 nnoremap <c-p> :FZF<cr>
 nnoremap <c-t> :GitFiles<cr>
@@ -15,16 +17,16 @@ nnoremap <silent> <leader>ev :tabe $MYVIMRC<cr>
 
 
 
+
 "nmap <silent> f 1GvG=
 nmap <silent> f mzgg=G`z
 nmap <silent> <c-n> :NERDTreeToggle<CR>
 
-" RSpec.vim mappings
-map <Leader>t :call RunCurrentSpecFile()<CR>
-map <Leader>s :call RunNearestSpec()<CR>
-map <Leader>l :call RunLastSpec()<CR>
-map <Leader>a :call RunAllSpecs()<CR>
-let g:rspec_command = "!bundle exec spring rspec {spec}"
+"vim-test mappings
+nnoremap <leader>t :TestFile<CR>
+nnoremap <Leader>s :TestNearest<CR>
+nnoremap <Leader>l :TestLast<CR>
+nnoremap <Leader>a :TestSuite<CR>
 
 set smartindent tabstop=2 shiftwidth=2 expandtab
 
@@ -34,14 +36,18 @@ set smartcase
 
 let g:gist_post_private = 1
 
+"\   'ruby': ['rubocop', 'prettier']
 let g:ale_set_highlights = 1
 let g:ale_fixers = {
 \   'javascript': ['eslint', 'prettier'],
-\   'ruby': ['rubocop']
+\   'ruby': ['standardrb', 'prettier']
 \}
+
+"\   'ruby': ['prettier', 'rubocop'],
+
 let g:ale_fix_on_save = 1
 let g:ale_linters = {
-\   'ruby': ['rubocop', 'prettier'],
+\   'ruby': ['prettier', 'standardrb'],
 \   'javascript': ['eslint', 'prettier']
 \}
 
