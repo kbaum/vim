@@ -44,3 +44,7 @@
 	path = bundle/onedark.vim
 	url = https://github.com/joshdick/onedark.vim.git
 	branch = master
+[submodule "bundle/vim-test"]
+	path = bundle/vim-test
+	url = https://github.com/vim-test/vim-test.git
+	branch = master
